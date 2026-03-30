@@ -1,0 +1,47 @@
+[
+  {
+    "id": "nyumbani",
+    "name": "Nyumbani",
+    "badge": "Monthly groceries",
+    "description": "Monthly home grocery shopping for individuals, couples, and small families who want a dependable kitchen restock.",
+    "speed": "Best for routine family restocks",
+    "highlights": ["Groceries & dry foods", "Cereals", "Fruits", "Greens & herbs"],
+    "contents": ["Maize flour", "Rice", "Beans", "Cooking oil", "Fruits", "Greens and vegetables", "Assorted herbs", "Dry foods"],
+    "useCases": ["Individuals", "Couples", "Small families", "Monthly kitchen restock"],
+    "pricing": [
+      { "label": "Nyumbani Lite", "price": 3500, "summary": "Simple monthly basics for one person or a couple." },
+      { "label": "Nyumbani Standard", "price": 4500, "summary": "Balanced restock for a small household." },
+      { "label": "Nyumbani Plus", "price": 6000, "summary": "Fuller monthly restock with more variety and volume." }
+    ]
+  },
+  {
+    "id": "sheree",
+    "name": "Sheree",
+    "badge": "Events package",
+    "description": "Personalized grocery curation for events and occasions with less overbuying and less stress.",
+    "speed": "Best for events and entertaining",
+    "highlights": ["Weddings", "Introductions", "Family gatherings", "House warmings"],
+    "contents": ["Tomatoes", "Onions", "Potatoes", "Fresh herbs", "Fruits", "Greens", "Dry foods", "Event cooking essentials"],
+    "useCases": ["Ruracio and introductions", "Weddings", "Family gatherings", "Baby celebrations", "Chama meetings", "House warmings"],
+    "pricing": [
+      { "label": "Small Gathering", "price": 4500, "summary": "For lighter event prep and intimate hosting." },
+      { "label": "Family Function", "price": 7500, "summary": "For medium-size gatherings with a fuller cooking list." },
+      { "label": "Large Occasion", "price": 12000, "summary": "For bigger celebrations that need broad ingredient coverage." }
+    ]
+  },
+  {
+    "id": "pamoja",
+    "name": "Pamoja",
+    "badge": "Group orders",
+    "description": "Shared grocery shopping for small groups who want one combined order with sorted delivery and lower costs.",
+    "speed": "Best for shared or office orders",
+    "highlights": ["3-4 people", "Smaller quantities", "Lower delivery costs", "Mama Fresh quality"],
+    "contents": ["Shared staples", "Mixed fruits", "Greens", "Vegetables", "Dry foods", "Sorted smaller quantities"],
+    "useCases": ["3 to 4 people under one order", "Neighbors sharing groceries", "Small office orders", "People who do not need bulk shopping"],
+    "pricing": [
+      { "label": "Two Households", "price": 4000, "summary": "Shared basics with smaller split quantities." },
+      { "label": "Three Households", "price": 6000, "summary": "A mixed basket suited to pooled shopping." },
+      { "label": "Office or Group Basket", "price": 8500, "summary": "A larger split-friendly order for a small team or group." }
+    ]
+  }
+]

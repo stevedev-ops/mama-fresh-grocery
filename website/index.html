@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mama Fresh Groceries</title>
+  <meta
+    name="description"
+    content="Village-sourced groceries, thoughtfully curated. Order Mama Fresh packages fast or build a custom grocery basket and send a clean WhatsApp order."
+  >
+  <meta property="og:title" content="Mama Fresh Groceries">
+  <meta property="og:description" content="Choose a package or build your own basket and send your order straight to WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f6b45">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="eyebrow">Mama Fresh Groceries</div>
+      <h1>Village-sourced groceries, thoughtfully curated.</h1>
+      <p class="hero-copy">
+        We help busy women and families enjoy affordable, fresh groceries from the countryside without the stress of shopping.
+      </p>
+      <div class="hero-highlights">
+        <span>Fresh from trusted village sources</span>
+        <span>Curated home and event packages</span>
+        <span>Custom baskets for full control</span>
+      </div>
+      <div class="hero-actions">
+        <a class="primary-link" href="#packages">Choose a Package</a>
+        <a class="secondary-link" href="#custom-order">Build Your Basket</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-block story-strip" aria-labelledby="why-mama-fresh-title">
+        <div class="section-intro">
+          <span class="section-kicker">Why Mama Fresh</span>
+          <h2 id="why-mama-fresh-title">Shopping support built for real homes and busy weeks.</h2>
+          <p>Whether you want a ready package or a handpicked basket, Mama Fresh keeps everyday grocery shopping simpler, calmer, and more reliable.</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <h3>Fast package flow</h3>
+            <p>Perfect when you want a guided order and a checkout that takes less than a minute.</p>
+          </article>
+          <article class="story-card">
+            <h3>Flexible custom basket</h3>
+            <p>Search, filter, add quantities, and build a grocery basket that matches your exact needs.</p>
+          </article>
+          <article class="story-card">
+            <h3>WhatsApp-ready orders</h3>
+            <p>Every order is structured clearly with customer details, item lists, and delivery information.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block section-priority" id="packages" aria-labelledby="packages-title">
+        <div class="section-intro">
+          <span class="section-kicker">Section 1</span>
+          <h2 id="packages-title">Choose a Package</h2>
+          <p>In a hurry? Choose a package and finish quickly. Tap any package to see exactly what is inside before ordering.</p>
+        </div>
+        <div class="guidance-banner">
+          <strong>Fastest route:</strong>
+          <span>Pick Nyumbani, Sheree, or Pamoja, choose a tier, and send a structured WhatsApp order in under 30 seconds.</span>
+        </div>
+        <div class="package-grid" id="package-grid"></div>
+        <div class="package-notes" id="package-notes"></div>
+      </section>
+
+      <section class="section-block collections-section" aria-labelledby="collections-title">
+        <div class="section-intro">
+          <span class="section-kicker">Featured Collections</span>
+          <h2 id="collections-title">Quick ways to start your custom basket.</h2>
+          <p>Tap a collection to filter the product grid to common shopping themes like weekly essentials, juice favorites, and event cooking basics.</p>
+        </div>
+        <div class="collection-grid" id="collection-grid"></div>
+        <div class="collection-feedback" id="collection-feedback" aria-live="polite"></div>
+      </section>
+
+      <section class="section-block section-secondary" id="custom-order" aria-labelledby="custom-order-title">
+        <div class="section-intro">
+          <span class="section-kicker">Section 2</span>
+          <h2 id="custom-order-title">Build Your Own Basket</h2>
+          <p>Want control? Browse essentials, search products, filter by category, and send a full itemized WhatsApp order.</p>
+        </div>
+        <div class="guidance-banner alt">
+          <strong>Full control:</strong>
+          <span>Search for products, filter by category, use featured collections, and adjust quantities before checkout.</span>
+        </div>
+
+        <div class="custom-layout">
+          <section class="product-panel" aria-labelledby="product-grid-title">
+            <div class="panel-heading">
+              <h3 id="product-grid-title">Fresh Picks</h3>
+              <p>Tap any product to add it to your basket. Product images use representative produce photography.</p>
+            </div>
+            <div class="search-bar">
+              <label class="search-label" for="product-search">Search products</label>
+              <div class="search-row">
+                <input id="product-search" type="search" placeholder="Search tomatoes, rice, sukuma..." autocomplete="off">
+                <button class="search-button" id="search-button" type="button">Search</button>
+              </div>
+            </div>
+            <div class="filter-bar" aria-label="Filter products by category" id="filter-bar"></div>
+            <div class="product-grid" id="product-grid"></div>
+          </section>
+
+          <aside class="cart-panel" aria-labelledby="cart-title">
+            <div class="panel-heading">
+              <h3 id="cart-title">Your Basket</h3>
+              <p id="cart-summary">No items yet.</p>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+              <p class="cart-subtotal" id="cart-subtotal">Estimated subtotal: KES 0</p>
+              <button class="checkout-button" id="checkout-button" type="button">Checkout on WhatsApp</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block logistics-section" aria-labelledby="delivery-title">
+        <div class="section-intro">
+          <span class="section-kicker">Delivery</span>
+          <h2 id="delivery-title">Simple delivery guidance for local and parcel orders.</h2>
+          <p>Mama Fresh currently supports Chuka local delivery and Nairobi parcel service, with room to extend to more zones later.</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <h3>Chuka local</h3>
+            <p>Use this if you want a local delivery around Chuka and nearby coverage zones.</p>
+          </article>
+          <article class="story-card">
+            <h3>Nairobi parcel service</h3>
+            <p>Choose this when your order should be sent through parcel service to Nairobi.</p>
+          </article>
+          <article class="story-card">
+            <h3>Future-ready structure</h3>
+            <p>The forms and order messages are ready to expand into more delivery zones and backend storage later.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block inspiration-section" aria-labelledby="inspiration-title">
+        <div class="section-intro">
+          <span class="section-kicker">Fresh Mix Ideas</span>
+          <h2 id="inspiration-title">Popular fruit and veggie pairings for juice and smoothie baskets.</h2>
+          <p>Inspired by combinations customers already shop for. This is produce inspiration, not medical advice.</p>
+        </div>
+        <div class="inspiration-grid" id="mixes-grid"></div>
+      </section>
+
+      <section class="section-block trust-section" aria-labelledby="trust-title">
+        <div class="section-intro">
+          <span class="section-kicker">Why Customers Trust It</span>
+          <h2 id="trust-title">Built to be easy now and extensible later.</h2>
+          <p>This website already supports the next layer of growth: repeat ordering, package customization, backend storage, and vendor assignment logic.</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <h3>Local memory</h3>
+            <p>Your basket, filters, and last package option are remembered in the browser to save time on repeat visits.</p>
+          </article>
+          <article class="story-card">
+            <h3>Clean order structure</h3>
+            <p>WhatsApp messages include delivery zone, timestamps, and order IDs for better follow-up.</p>
+          </article>
+          <article class="story-card">
+            <h3>Easy content updates</h3>
+            <p>Products, packages, collections, and testimonials now live in data files instead of being hardcoded in the app logic.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block testimonial-section" aria-labelledby="testimonials-title">
+        <div class="section-intro">
+          <span class="section-kicker">Customer Love</span>
+          <h2 id="testimonials-title">What this experience is designed to feel like.</h2>
+          <p>Fast, calm, and clear enough that customers can order groceries without back-and-forth confusion.</p>
+        </div>
+        <div class="testimonial-grid" id="testimonial-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <button class="sticky-cart" id="sticky-cart" type="button" aria-label="Open basket">
+    <span class="sticky-cart-icon">Bag</span>
+    <span class="sticky-cart-copy">
+      <strong>Basket</strong>
+      <span id="sticky-cart-count">0 items</span>
+    </span>
+  </button>
+
+  <div class="modal-backdrop" id="package-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="package-modal-title">
+      <button class="modal-close" type="button" data-close="package-modal" aria-label="Close package checkout">Close</button>
+      <div class="modal-header">
+        <span class="modal-kicker">Package Order</span>
+        <h3 id="package-modal-title">Complete your package order</h3>
+        <p id="package-selected-copy"></p>
+      </div>
+      <form id="package-form" novalidate>
+        <input type="hidden" id="package-name">
+        <label>
+          Package option
+          <select id="package-tier" required></select>
+        </label>
+        <label>
+          Name
+          <input id="package-customer-name" name="name" type="text" autocomplete="name" required>
+        </label>
+        <label>
+          Phone
+          <input id="package-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+        </label>
+        <label>
+          Delivery Zone
+          <select id="package-zone" name="zone">
+            <option>Chuka Local</option>
+            <option>Nairobi Parcel</option>
+          </select>
+        </label>
+        <label>
+          Delivery Location
+          <input id="package-location" name="location" type="text" autocomplete="street-address" required>
+        </label>
+        <p class="form-error" id="package-error" aria-live="polite"></p>
+        <button class="submit-button" type="submit">Send Package Order</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="package-details-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="package-details-title">
+      <button class="modal-close" type="button" data-close="package-details-modal" aria-label="Close package details">Close</button>
+      <div class="modal-header">
+        <span class="modal-kicker">Package Details</span>
+        <h3 id="package-details-title">See what is inside this package</h3>
+        <p id="package-details-copy"></p>
+      </div>
+      <div class="details-section">
+        <h4>Included items</h4>
+        <div class="details-pill-list" id="package-details-items"></div>
+      </div>
+      <div class="details-section">
+        <h4>Best for</h4>
+        <ul class="details-list" id="package-details-use-cases"></ul>
+      </div>
+      <div class="details-section">
+        <h4>Package options</h4>
+        <ul class="details-list" id="package-details-pricing"></ul>
+      </div>
+      <button class="submit-button" id="package-details-order-button" type="button">Order This Package</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="custom-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="custom-modal-title">
+      <button class="modal-close" type="button" data-close="custom-modal" aria-label="Close custom checkout">Close</button>
+      <div class="modal-header">
+        <span class="modal-kicker">Custom Order</span>
+        <h3 id="custom-modal-title">Finish your basket order</h3>
+        <p>Your itemized basket will be sent to WhatsApp exactly as listed below.</p>
+      </div>
+      <div class="checkout-preview" id="checkout-preview"></div>
+      <form id="custom-form" novalidate>
+        <label>
+          Name
+          <input id="custom-customer-name" name="name" type="text" autocomplete="name" required>
+        </label>
+        <label>
+          Phone
+          <input id="custom-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+        </label>
+        <label>
+          Delivery Zone
+          <select id="custom-zone" name="zone">
+            <option>Chuka Local</option>
+            <option>Nairobi Parcel</option>
+          </select>
+        </label>
+        <label>
+          Delivery Location
+          <input id="custom-location" name="location" type="text" autocomplete="street-address" required>
+        </label>
+        <label>
+          Notes (optional)
+          <textarea id="custom-notes" name="notes" rows="3" placeholder="Gate code, preferred delivery time, substitutions, or extra details"></textarea>
+        </label>
+        <p class="form-error" id="custom-error" aria-live="polite"></p>
+        <button class="submit-button" type="submit">Send Custom Order</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
