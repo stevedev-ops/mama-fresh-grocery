@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Packages - Mama Fresh Groceries</title>
+  <meta
+    name="description"
+    content="Choose a Mama Fresh package and finish quickly. Browse Nyumbani, Sheree, or Pamoja packages and send a structured WhatsApp order."
+  >
+  <meta property="og:title" content="Packages - Mama Fresh Groceries">
+  <meta property="og:description" content="Choose a package and finish quickly. Send a structured WhatsApp order in under 30 seconds.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f6b45">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Mama Fresh</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-shell">
+    <header class="page-header">
+      <div class="eyebrow">Section 1</div>
+      <h1>Choose a Package</h1>
+      <p class="page-header-copy">
+        In a hurry? Choose a package and finish quickly. Tap any package to see exactly what is inside before ordering.
+      </p>
+    </header>
+
+    <main>
+      <section class="section-block section-priority" id="packages" aria-labelledby="packages-title">
+        <div class="guidance-banner">
+          <strong>Fastest route:</strong>
+          <span>Pick Nyumbani, Sheree, or Pamoja, choose a tier, and send a structured WhatsApp order in under 30 seconds.</span>
+        </div>
+        <div class="package-grid" id="package-grid"></div>
+        <div class="package-notes" id="package-notes"></div>
+      </section>
+    </main>
+  </div>
+
+  <button class="sticky-cart" id="sticky-cart" type="button" aria-label="Open basket">
+    <span class="sticky-cart-icon">Bag</span>
+    <span class="sticky-cart-copy">
+      <strong>Basket</strong>
+      <span id="sticky-cart-count">0 items</span>
+    </span>
+  </button>
+
+  <div class="modal-backdrop" id="package-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="package-modal-title">
+      <button class="modal-close" type="button" data-close="package-modal" aria-label="Close package checkout">Close</button>
+      <div class="modal-header">
+        <span class="modal-kicker">Package Order</span>
+        <h3 id="package-modal-title">Complete your package order</h3>
+        <p id="package-selected-copy"></p>
+      </div>
+      <form id="package-form" novalidate>
+        <input type="hidden" id="package-name">
+        <label>
+          Package option
+          <select id="package-tier" required></select>
+        </label>
+        <label>
+          Name
+          <input id="package-customer-name" name="name" type="text" autocomplete="name" required>
+        </label>
+        <label>
+          Phone
+          <input id="package-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+        </label>
+        <label>
+          Delivery Zone
+          <select id="package-zone" name="zone">
+            <option>Chuka Local</option>
+            <option>Nairobi Parcel</option>
+          </select>
+        </label>
+        <label>
+          Delivery Location
+          <input id="package-location" name="location" type="text" autocomplete="street-address" required>
+        </label>
+        <p class="form-error" id="package-error" aria-live="polite"></p>
+        <button class="submit-button" type="submit">Send Package Order</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="package-details-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="package-details-title">
+      <button class="modal-close" type="button" data-close="package-details-modal" aria-label="Close package details">Close</button>
+      <div class="modal-header">
+        <span class="modal-kicker">Package Details</span>
+        <h3 id="package-details-title">See what is inside this package</h3>
+        <p id="package-details-copy"></p>
+      </div>
+      <div class="details-section">
+        <h4>Included items</h4>
+        <div class="details-pill-list" id="package-details-items"></div>
+      </div>
+      <div class="details-section">
+        <h4>Best for</h4>
+        <ul class="details-list" id="package-details-use-cases"></ul>
+      </div>
+      <div class="details-section">
+        <h4>Package options</h4>
+        <ul class="details-list" id="package-details-pricing"></ul>
+      </div>
+      <button class="submit-button" id="package-details-order-button" type="button">Order This Package</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

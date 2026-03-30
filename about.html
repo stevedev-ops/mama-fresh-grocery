@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Mama Fresh Groceries</title>
+  <meta
+    name="description"
+    content="Learn about Mama Fresh delivery options, why customers trust us, and get fresh mix ideas for juice and smoothie baskets."
+  >
+  <meta property="og:title" content="About - Mama Fresh Groceries">
+  <meta property="og:description" content="Delivery info, trust features, and fresh mix ideas for your grocery orders.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f6b45">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Mama Fresh</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-shell">
+    <header class="page-header">
+      <div class="eyebrow">About Mama Fresh</div>
+      <h1>Everything you need to know about ordering with us.</h1>
+      <p class="page-header-copy">
+        Delivery options, trust features, and fresh mix ideas to inspire your next order.
+      </p>
+    </header>
+
+    <main>
+      <section class="section-block logistics-section" aria-labelledby="delivery-title">
+        <div class="section-intro">
+          <span class="section-kicker">Delivery</span>
+          <h2 id="delivery-title">Simple delivery guidance for local and parcel orders.</h2>
+          <p>Mama Fresh currently supports Chuka local delivery and Nairobi parcel service, with room to extend to more zones later.</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <h3>Chuka local</h3>
+            <p>Use this if you want a local delivery around Chuka and nearby coverage zones.</p>
+          </article>
+          <article class="story-card">
+            <h3>Nairobi parcel service</h3>
+            <p>Choose this when your order should be sent through parcel service to Nairobi.</p>
+          </article>
+          <article class="story-card">
+            <h3>Future-ready structure</h3>
+            <p>The forms and order messages are ready to expand into more delivery zones and backend storage later.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block inspiration-section" aria-labelledby="inspiration-title">
+        <div class="section-intro">
+          <span class="section-kicker">Fresh Mix Ideas</span>
+          <h2 id="inspiration-title">Popular fruit and veggie pairings for juice and smoothie baskets.</h2>
+          <p>Inspired by combinations customers already shop for. This is produce inspiration, not medical advice.</p>
+        </div>
+        <div class="inspiration-grid" id="mixes-grid"></div>
+      </section>
+
+      <section class="section-block trust-section" aria-labelledby="trust-title">
+        <div class="section-intro">
+          <span class="section-kicker">Why Customers Trust It</span>
+          <h2 id="trust-title">Built to be easy now and extensible later.</h2>
+          <p>This website already supports the next layer of growth: repeat ordering, package customization, backend storage, and vendor assignment logic.</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <h3>Local memory</h3>
+            <p>Your basket, filters, and last package option are remembered in the browser to save time on repeat visits.</p>
+          </article>
+          <article class="story-card">
+            <h3>Clean order structure</h3>
+            <p>WhatsApp messages include delivery zone, timestamps, and order IDs for better follow-up.</p>
+          </article>
+          <article class="story-card">
+            <h3>Easy content updates</h3>
+            <p>Products, packages, collections, and testimonials now live in data files instead of being hardcoded in the app logic.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-intro">
+          <span class="section-kicker">Ready to Order?</span>
+          <h2>Start shopping now.</h2>
+          <p>Choose a package or build your own basket.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-link" href="packages.html">Choose a Package</a>
+          <a class="secondary-link" href="shop.html">Build Your Basket</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button class="sticky-cart" id="sticky-cart" type="button" aria-label="Open basket">
+    <span class="sticky-cart-icon">Bag</span>
+    <span class="sticky-cart-copy">
+      <strong>Basket</strong>
+      <span id="sticky-cart-count">0 items</span>
+    </span>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

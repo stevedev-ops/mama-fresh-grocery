@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testimonials - Mama Fresh Groceries</title>
+  <meta
+    name="description"
+    content="What this experience is designed to feel like. Fast, calm, and clear enough that customers can order groceries without back-and-forth confusion."
+  >
+  <meta property="og:title" content="Testimonials - Mama Fresh Groceries">
+  <meta property="og:description" content="See what customers say about ordering with Mama Fresh.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f6b45">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Mama Fresh</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-shell">
+    <header class="page-header">
+      <div class="eyebrow">Customer Love</div>
+      <h1>What this experience is designed to feel like.</h1>
+      <p class="page-header-copy">
+        Fast, calm, and clear enough that customers can order groceries without back-and-forth confusion.
+      </p>
+    </header>
+
+    <main>
+      <section class="section-block testimonial-section" aria-labelledby="testimonials-title">
+        <div class="testimonial-grid" id="testimonial-grid"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-intro">
+          <span class="section-kicker">Join Them</span>
+          <h2>Experience the Mama Fresh difference.</h2>
+          <p>Start your order today and see how easy grocery shopping can be.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-link" href="packages.html">Choose a Package</a>
+          <a class="secondary-link" href="shop.html">Build Your Basket</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button class="sticky-cart" id="sticky-cart" type="button" aria-label="Open basket">
+    <span class="sticky-cart-icon">Bag</span>
+    <span class="sticky-cart-copy">
+      <strong>Basket</strong>
+      <span id="sticky-cart-count">0 items</span>
+    </span>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

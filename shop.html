@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop - Mama Fresh Groceries</title>
+  <meta
+    name="description"
+    content="Build your own grocery basket. Browse essentials, search products, filter by category, and send a full itemized WhatsApp order."
+  >
+  <meta property="og:title" content="Shop - Mama Fresh Groceries">
+  <meta property="og:description" content="Build your own grocery basket and send a full itemized WhatsApp order.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f6b45">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Mama Fresh</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-shell">
+    <header class="page-header">
+      <div class="eyebrow">Section 2</div>
+      <h1>Build Your Own Basket</h1>
+      <p class="page-header-copy">
+        Want control? Browse essentials, search products, filter by category, and send a full itemized WhatsApp order.
+      </p>
+    </header>
+
+    <main>
+      <section class="section-block section-secondary" id="custom-order" aria-labelledby="custom-order-title">
+        <div class="guidance-banner alt">
+          <strong>Full control:</strong>
+          <span>Search for products, filter by category, use featured collections, and adjust quantities before checkout.</span>
+        </div>
+
+        <div class="custom-layout">
+          <section class="product-panel" aria-labelledby="product-grid-title">
+            <div class="panel-heading">
+              <h3 id="product-grid-title">Fresh Picks</h3>
+              <p>Tap any product to add it to your basket. Product images use representative produce photography.</p>
+            </div>
+            <div class="search-bar">
+              <label class="search-label" for="product-search">Search products</label>
+              <div class="search-row">
+                <input id="product-search" type="search" placeholder="Search tomatoes, rice, sukuma..." autocomplete="off">
+                <button class="search-button" id="search-button" type="button">Search</button>
+              </div>
+            </div>
+            <div class="filter-bar" aria-label="Filter products by category" id="filter-bar"></div>
+            <div class="product-grid" id="product-grid"></div>
+          </section>
+
+          <aside class="cart-panel" aria-labelledby="cart-title">
+            <div class="panel-heading">
+              <h3 id="cart-title">Your Basket</h3>
+              <p id="cart-summary">No items yet.</p>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+              <p class="cart-subtotal" id="cart-subtotal">Estimated subtotal: KES 0</p>
+              <button class="checkout-button" id="checkout-button" type="button">Checkout on WhatsApp</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button class="sticky-cart" id="sticky-cart" type="button" aria-label="Open basket">
+    <span class="sticky-cart-icon">Bag</span>
+    <span class="sticky-cart-copy">
+      <strong>Basket</strong>
+      <span id="sticky-cart-count">0 items</span>
+    </span>
+  </button>
+
+  <div class="modal-backdrop" id="custom-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="custom-modal-title">
+      <button class="modal-close" type="button" data-close="custom-modal" aria-label="Close custom checkout">Close</button>
+      <div class="modal-header">
+        <span class="modal-kicker">Custom Order</span>
+        <h3 id="custom-modal-title">Finish your basket order</h3>
+        <p>Your itemized basket will be sent to WhatsApp exactly as listed below.</p>
+      </div>
+      <div class="checkout-preview" id="checkout-preview"></div>
+      <form id="custom-form" novalidate>
+        <label>
+          Name
+          <input id="custom-customer-name" name="name" type="text" autocomplete="name" required>
+        </label>
+        <label>
+          Phone
+          <input id="custom-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+        </label>
+        <label>
+          Delivery Zone
+          <select id="custom-zone" name="zone">
+            <option>Chuka Local</option>
+            <option>Nairobi Parcel</option>
+          </select>
+        </label>
+        <label>
+          Delivery Location
+          <input id="custom-location" name="location" type="text" autocomplete="street-address" required>
+        </label>
+        <label>
+          Notes (optional)
+          <textarea id="custom-notes" name="notes" rows="3" placeholder="Gate code, preferred delivery time, substitutions, or extra details"></textarea>
+        </label>
+        <p class="form-error" id="custom-error" aria-live="polite"></p>
+        <button class="submit-button" type="submit">Send Custom Order</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

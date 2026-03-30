@@ -2,6 +2,7 @@
   {
     "id": "nyumbani",
     "name": "Nyumbani",
+    "imageUrl": "https://images.unsplash.com/photo-1768734831381-39336657aae9?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600",
     "badge": "Monthly groceries",
     "description": "Monthly home grocery shopping for individuals, couples, and small families who want a dependable kitchen restock.",
     "speed": "Best for routine family restocks",
@@ -17,6 +18,7 @@
   {
     "id": "sheree",
     "name": "Sheree",
+    "imageUrl": "https://images.unsplash.com/photo-1771659753573-e8498a262168?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600",
     "badge": "Events package",
     "description": "Personalized grocery curation for events and occasions with less overbuying and less stress.",
     "speed": "Best for events and entertaining",
@@ -32,6 +34,7 @@
   {
     "id": "pamoja",
     "name": "Pamoja",
+    "imageUrl": "https://images.unsplash.com/photo-1759344114577-b6c32e4d68c8?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600",
     "badge": "Group orders",
     "description": "Shared grocery shopping for small groups who want one combined order with sorted delivery and lower costs.",
     "speed": "Best for shared or office orders",
